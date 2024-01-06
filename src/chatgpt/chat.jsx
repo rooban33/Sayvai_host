@@ -5,11 +5,12 @@ import { MainContainer, ChatContainer, MessageList, Message, MessageInput, Typin
 
 
 
-const API_KEY = "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";
+const API_KEY = "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";
+const systemMessage = {
+  "role": "system",
+  "content": "You are Sayvai, a virtual assistant. Utilize the\nfollowing tools and procedures to schedule a meeting:\nif the user needs to contact someone in the company: you\n can contact Sayvai with support@sayvai.io or call 9791723344,\nif you wish to schedule a meeting with one of out co-founder's i can help you with that"
+};
 
-const systemMessage = { 
-  "role": "system", "content": "Explain things like you're talking to a software professional with 2 years of experience."
-}
 
 function Chat() {
   const [messages, setMessages] = useState([
