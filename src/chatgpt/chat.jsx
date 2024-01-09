@@ -92,33 +92,31 @@ function Chat() {
 
   return (
     <div className="App">
-        <div class="main__cards cards">
-      <div class="cards__inner">
-        <div class="cards__card card">
-        <div style={{ position:"relative", height: "800px", width: "700px"  }}>
-        <MainContainer>
-          <ChatContainer>       
-            <MessageList 
-              scrollBehavior="smooth" 
-              typingIndicator={isTyping ? <TypingIndicator content="Kutty is typing 😺" /> : null}
-            >
-              {messages.map((message, i) => {
-                console.log(message)
-                return <Message key={i} model={message} />
-              })}
-            </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />        
-          </ChatContainer>
-        </MainContainer>
-      </div>
+  <div class="main__cards cards">
+    <div class="cards__inner">
+      <div class="cards__card card">
+        <div className="chat-container">
+          <MainContainer>
+            <ChatContainer>       
+              <MessageList 
+                scrollBehavior="smooth" 
+                typingIndicator={isTyping ? <TypingIndicator content="Kutty is typing 😺" /> : null}
+              >
+                {messages.map((message, i) => {
+                  console.log(message)
+                  return <Message key={i} model={message} />
+                })}
+              </MessageList>
+              <MessageInput placeholder="Type message here" onSend={handleSend} />        
+            </ChatContainer>
+          </MainContainer>
+        </div>
+      </div>   
     </div>
-         
-        </div>
-        </div>
+  </div>
+  <div class="overlay cards__inner"></div>
+</div>
 
-
-      <div class="overlay cards__inner"></div>
-        </div>
       
   )
 }
