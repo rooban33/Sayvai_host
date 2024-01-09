@@ -1904,6 +1904,21 @@ footer span a:hover{
 .hero__cnt h1 {
   margin-bottom: 0;
 }
+@media screen and (max-width: 768px) {
+  .hero__bg picture {
+    height: auto; /* Reset height for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .hero__cnt h3 {
+    font-size: 3vw; /* Adjust h3 font size for smaller screens */
+  }
+
+  .hero__cnt img {
+    height: 18vw; /* Adjust image height for smaller screens */
+  }
+
+}
 
 /* Animation */
 @keyframes fade-in {
